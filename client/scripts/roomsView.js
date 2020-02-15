@@ -12,7 +12,9 @@ var RoomsView = {
 
   initialize: function() {
     var rm = new Rooms();
-    // $('#rooms select').append(rm.render({roomname: 'animal'}));
+    $('#rooms button').on('click', function() {
+      RoomsView.renderRoom('ddd');
+    });
 
   },
 
@@ -23,10 +25,6 @@ var RoomsView = {
 
     var rm = new Rooms();
     $('#rooms select').append(rm.render({roomname: roomName}));
-
-
-
-
   }
 
 };

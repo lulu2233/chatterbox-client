@@ -5,6 +5,9 @@ class Rooms  {
         '<div class=\'roomname\'><%- roomname %></div>' +
       '</div>'
     );
+
+    this.add = function() {
+    };
   }
 
 
