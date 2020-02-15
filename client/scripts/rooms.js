@@ -7,6 +7,7 @@ class Rooms  {
     );
 
     this.add = function() {
+      
     };
   }
 

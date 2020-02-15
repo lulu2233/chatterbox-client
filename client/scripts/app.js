@@ -32,6 +32,16 @@ var App = {
     });
   },
 
+  // post: function(callback = ()=>{}) {
+  //   Parse.create((message) => {
+  //     // get message
+  //     // send message to Parse -> create -> POST ajax call
+
+  //     callback();
+  //   });
+
+  // },
+
   startSpinner: function() {
     App.$spinner.show();
     FormView.setStatus(true);

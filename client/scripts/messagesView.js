@@ -22,13 +22,10 @@ var MessagesView = {
     $('#chats').append(messages);
   },
 
-
-
-
   renderMessage: function(msg) {
     var mv = new MessageView();
     var messageCompile = mv.render(msg);
-    
+
     $('#chats').append(messageCompile);
   },
 
