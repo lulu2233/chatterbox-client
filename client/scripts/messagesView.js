@@ -30,12 +30,13 @@ var MessagesView = {
 
 
   renderMessage: function(msg) {
-    // var messageComplie = render2(msg);
-    // $('#chats').append(messageComplie);
-
-  }
   //create renderMessage method
   // append ._template(data.results) to $chat
+    var mv = new MessageView();
+    var messageComplie = mv.render(msg);
+    $('#chats').append(messageComplie);
+  }
+
 
 
 
