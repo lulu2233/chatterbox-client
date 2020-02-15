@@ -1,7 +1,8 @@
 var MessagesView = {
 
-  messages: [],
+
   $chats: $('#chats'),
+
 
   initialize: function() {
   // create empty html element
@@ -13,26 +14,24 @@ var MessagesView = {
   },
 
   render: function(data) {
+    var messages = '';
+
+    // console.log(data.results);
+    let mv = new MessageView();
+    for (i = 0; i < data.results.length; i++) {
+      messages += mv.render(data.results[i]);
+    }
+    $('#chats').append(messages);
     // var $messageDisplay = $("<div>", {id: 'messages'});
     // $('#chats').append($messageDisplay);
-
-
-    // for (var i = 0; i < data.results.length; i++) {
-    //   var messageText = data.results[i].text;
-    //   var username = data.results[i].username;
-    //   var roomName = data.results[i].roomname;
-    //   $($messageDisplay).append(username+ ": " + '\r\n');
-    //   $($messageDisplay).append(messageText + '\r\n');
-    //   // $($messageDisplay).append("<p>" + roomName + "</p>");
-    // }
-    this.messages = data.results.map((message) => {
-      return MessageView.render(message);
-    });
-
-    this.$chats.append(this.messages);
-
   },
-  renderMessage: function(data) {
+
+
+
+
+  renderMessage: function(msg) {
+    // var messageComplie = render2(msg);
+    // $('#chats').append(messageComplie);
 
   }
   //create renderMessage method
