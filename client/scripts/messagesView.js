@@ -5,9 +5,6 @@ var MessagesView = {
 
 
   initialize: function() {
-  // create empty html element
-  // use jquery to append data to html element
-    // var htmlEl = '<div></div>';
 
     // $('#chats').append("HELLLOOOO");
 
@@ -19,7 +16,9 @@ var MessagesView = {
     // console.log(data.results);
     let mv = new MessageView();
     for (i = 0; i < data.results.length; i++) {
-      messages += mv.render(data.results[i]);
+      if (data.results[i].text) {
+        messages += mv.render(data.results[i]);
+      }
     }
     $('#chats').append(messages);
     // var $messageDisplay = $("<div>", {id: 'messages'});

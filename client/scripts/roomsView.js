@@ -11,8 +11,8 @@ var RoomsView = {
   // });
 
   initialize: function() {
-    var roomOptions = {};
-    var roomSelect = $('#rooms select');
+    var rm = new Rooms();
+    // $('#rooms select').append(rm.render({roomname: 'animal'}));
 
   },
 
@@ -20,7 +20,11 @@ var RoomsView = {
   },
 
   renderRoom: function(roomName) {
-    $select.a;
+
+    var rm = new Rooms();
+    $('#rooms select').append(rm.render({roomname: roomName}));
+
+
 
 
   }
