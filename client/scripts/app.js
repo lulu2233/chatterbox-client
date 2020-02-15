@@ -4,11 +4,18 @@ var App = {
 
   username: 'anonymous',
 
+
+
   initialize: function() {
     App.username = window.location.search.substr(10);
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
+    $(document).on('click', '.username', function() {
+      var username = $(this).text();
+
+      Friends.toggleStatus(username);
+    }),
 
     // Fetch initial batch of messages
     App.startSpinner();
